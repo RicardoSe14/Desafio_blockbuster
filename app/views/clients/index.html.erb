@@ -1,0 +1,54 @@
+<section>
+    <div class="slide">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+           <img src="<%= asset_path 'carousel1.jpg' %>" class="d-block w-100" alt="Portada San Pedro">
+          </div>
+          <div class="carousel-item active">
+           <img src="<%= asset_path 'carousel2.jpg' %>" class="d-block w-100" alt="Portada San Pedro">
+          </div>
+          <div class="carousel-item active">
+           <img src="<%= asset_path 'carousel3.jpg' %>" class="d-block w-100" alt="Portada San Pedro">
+          </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    </section>
+
+
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+  <h1>Clientes</h1>
+
+  <%= link_to "New client", new_client_path %>
+
+  <div id="clients">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Movie</th>
+          <th scope="col" colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @clients.each do |client| %>
+          <%= render client %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

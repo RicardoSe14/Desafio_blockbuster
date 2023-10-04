@@ -1,0 +1,16 @@
+<div class="container">
+
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+  <h1>Peliculas</h1>
+  <%= link_to "Agregar Pelicula", new_movie_path %>
+  <div id="movies">
+    <div class="row">
+      <% @movies.each do |movie| %>
+        <%= render movie %>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>
